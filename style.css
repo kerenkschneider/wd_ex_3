@@ -1,5 +1,7 @@
-.page_ccontainer {
-    background-color: #EBEBEB; 
+
+.html, body {
+        background-color: #EBEBEB; 
+        /* background-color: #39EAAA; */
 }
 
 /*********/
@@ -12,7 +14,6 @@
     src: url("assets/fonts/SimplerPro/SimplerPro-BlackItalic.woff2") format("woff2");   
 }
 
-
 @font-face {
     font-family: 'SimplerPro-bold';
     src: url("assets/fonts/SimplerPro/SimplerPro-Bold.woff2") format("woff2");    
@@ -21,6 +22,11 @@
 @font-face {
     font-family: 'SimplerPro-regular';
     src: url("assets/fonts/SimplerPro/SimplerPro-Regular.woff2") format("woff2");   
+}
+
+@font-face {
+    font-family: 'SimplerPro-regular-italic';
+    src: url("assets/fonts/SimplerPro/SimplerPro-RegularItalic.woff2") format("woff2");   
 }
 
 @font-face {
@@ -50,10 +56,7 @@
     min-width: 150px; 
     padding: 10px;
 
-    z-index: 1;
-
-    /* DEBUG */
-    /* background-color: #ec3c3c;  */
+    z-index: 3;
 }
 
 .logo {
@@ -78,12 +81,12 @@
 }
 
 .menu_link:hover {
-    font-family: 'SimplerPro-black-italic';
     text-decoration: underline;
 }
 
 .menu_link_choosen {
-    background-color: yellow;}
+    font-family: 'SimplerPro-black-italic';
+}
 
 
 /**************/
@@ -153,35 +156,41 @@
 /* article */
 /***********/
 
-.main_section_container{
+.main{
     position: relative;
     display: flex; 
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
 
     z-index: 2;
+
+    width: 74%; 
+
+}
+
+.main_section_container{
+    margin-top: -30px;
+    margin-right: 12%;
 }
 
 .main_section_text_container{    
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-    width: 900px; 
-    min-width: 600px; 
-    padding: 30px;
-
-    /* background-color: red;  */
+    display: flex; 
 }
 
-.main_section_text_container h3{    
-     /* text style */
-     font-family: 'SimplerPro-semi-bold';
-     font-size: 25px;
-     line-height: 1;
+.main_section_headline_container{
+    margin-bottom: -20px;
+    margin-right: 18%;  
+}
 
-     margin-bottom: 10px;
-     margin-top: 10px;
-     margin-right: -30px;  
-
+.main_section_headline_container h3{    
+    /* text style */
+    font-family: 'SimplerPro-semi-bold';
+    font-size: 25px;
+    line-height: 1;
 }
 
 .bullet {
@@ -196,20 +205,113 @@
     border-right: 8px solid black; 
     margin-right: 0px;      
 
+    flex-basis: 70%;
 }
 
 .main_text{
-    background-color: #39EAAA;
+    background-color: #3FD087;
+    /* background-color: #EBEBEB;  */
+
     margin-right: 20px;    
     padding: 25px;  
 }
 
-.main_text p{    
-    /* text style */
-    font-family: 'SimplerPro-regular';
+.side_note_container{
+    padding: 25px;  
+
+    flex-basis: 20%;
+}
+
+
+/*****************/
+/* micro article */
+/*****************/
+
+.regular{
     font-size: 18px;
     line-height: 1.5;
-
-    margin-bottom: 0px;
+    font-family: 'SimplerPro-regular';
+    margin-bottom: 10px;
     margin-top: 0px;
+}
+
+.quote{    
+    /* text style */
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'SimplerPro-regular-italic';
+
+    /* position */
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.quate_mark{    
+    /* text style */
+    font-family: 'SimplerPro-bold';
+}
+
+.quote_small{    
+    /* text style */
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'SimplerPro-regular-italic';
+
+    /* position */
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.quote_arabic{    
+    /* text style */
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'SimplerPro-regular';
+
+    /* position */
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.side_note_mark{    
+    /* text style */
+    font-family: 'SimplerPro-light-italic';
+    font-size: 10px;
+
+    /* position */
+    position: relative;
+    top: -5px; }
+
+.side_notes p{    
+    /* text style */
+
+    font-size: 14px;    
+    line-height: 1.5;
+    opacity: 0.8;
+    text-align: left;
+
+    /* position */
+    /* margin-bottom: 20px; */
+    margin-top: 0px;
+}
+
+.num {
+    font-family: 'SimplerPro-light';
+    margin-bottom: 0px;
+}
+
+.text {
+    font-family: 'SimplerPro-light-italic';
+    margin-bottom: 20px;
+}
+
+.transparent-text {
+    color: #EBEBEB;
 }
