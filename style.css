@@ -361,7 +361,7 @@
         /* margin-top: 100px; */
         width: 100%; 
         align-items: flex-end; 
-        margin-right: -50px;
+        margin-right: -10%;
     }
 
     .main_auther {
@@ -392,11 +392,15 @@
     }
 
     .regular{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .quote{
-        font-size: 14px;
+        font-size: 16px;
+    }
+    .main{
+        width: 110%;
+
     }
 }
 
