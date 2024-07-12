@@ -132,7 +132,6 @@
     align-self: flex-end;
 
     width: 250px; 
-    min-width: 200px; 
     padding: 20px;
     left: 0;
 }
@@ -291,8 +290,6 @@
     margin-top: -25px;
 }
 
-
-
 .quate_mark{    
     /* text style */
     font-family: 'SimplerPro-bold';
@@ -398,6 +395,10 @@
     opacity: 0.8;
 }
 
+
+/******************/
+/* responsiveness */
+/******************/
 
 
 /* Media query for small screens */
