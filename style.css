@@ -413,6 +413,10 @@
     .main_auther {
         width: 450px; 
     }
+
+    .headline_container h1{
+        font-size: 8.5vw; /* Adjust font size for smaller screens */;
+    }
 }
 
 @media (max-width: 850px) {
