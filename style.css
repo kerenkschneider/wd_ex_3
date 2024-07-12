@@ -210,6 +210,13 @@
     line-height: 1;
 }
 
+.main_section_headline_container h4{    
+    /* text style */
+    font-family: 'SimplerPro-regular-italic';
+    font-size: 20px;
+    margin-top: -15px;
+    margin-right: 70px;
+}
 .bullet {
     position: relative;
     font-family: 'Frankg-regular';
@@ -233,6 +240,12 @@
 
 .main_text_masa{
     background-color: #F5BE2C;
+    margin-right: 20px;    
+    padding: 25px;  
+}
+
+.main_text_lists{
+    background-color: #E53C35;
     margin-right: 20px;    
     padding: 25px;  
 }
