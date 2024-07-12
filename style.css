@@ -251,7 +251,6 @@
 
 .side_note_container{
     padding: 25px;  
-
     flex-basis: 20%;
 }
 
@@ -280,6 +279,7 @@
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
 
 .img_text{    
     /* text style */
@@ -358,7 +358,15 @@
 }
 
 .transparent-text {
-    color: #EBEBEB;
+    opacity: 0%;
+    margin-top: -20px;
+}
+
+.transparent_list-text {
+    color: #E53C35;
+    line-height: 0.00001px;
+    margin-top: -20px;
+    opacity: 0%;
 }
 
 .article_img{
