@@ -589,8 +589,7 @@
     font-size: 16px;
 }
 .main{
-    width: 110%;
-    
+    margin-right: 0%; 
 }
 .main_section_headline_container{
     margin-right: 0%;  
@@ -611,9 +610,6 @@
 
 }
 @media (max-width: 440px) {
-    .main{
-        width: 110%;
-    }
     .click_logo_container{
         width: 70px;
     }
