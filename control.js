@@ -135,3 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+/* JavaScript function to toggle menu visibility */
+function toggleMenu() {
+    var menu = document.querySelector('.links_container');
+    menu.classList.toggle('menu_visible');
+}
