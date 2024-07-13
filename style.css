@@ -310,6 +310,13 @@
     padding: 25px;  
 }
 
+.main_text_open{
+    background-color: #d4ef89;
+    margin-right: 20px;    
+    padding: 25px;  
+}
+
+
 .side_note_container{
     padding: 25px;  
     flex-basis: 20%;
@@ -599,15 +606,29 @@
 
 .open{
     width: 35px;
-    margin-right: 35px;
+    margin-right: 3px;
 }
 
 }
 @media (max-width: 440px) {
-.main{
-    width: 110%;
+    .main{
+        width: 110%;
+    }
 }
 
+@media (max-width: 400px) {
+    .click_logo_container{
+        width: 70px;
+    }
+    
+    .logo{
+        width: 70px;
+    }
+    
+    .open{
+        width: 25px;
+        margin-right: 3px;
+    }
 }
 
 

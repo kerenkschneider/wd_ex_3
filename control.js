@@ -6,8 +6,10 @@ function toggleExtraContent(sectionId) {
     var section = document.getElementById(sectionId);
     if (section.style.display === 'block') {
         section.style.display = 'none';
+        localStorage.setItem(sectionId, 'closed');
     } else {
         section.style.display = 'block';
+        localStorage.setItem(sectionId, 'open');
     }
 }
 
@@ -21,11 +23,17 @@ function toggleNestedContent(nestedSectionId, link) {
             if (section.style.display === 'block') {
                 section.style.display = 'none';
                 isCurrentlyOpen = true;
+                localStorage.setItem(nestedSectionId, 'closed');
+                localStorage.setItem(nestedSectionId + '_bold', 'false');
             } else {
                 section.style.display = 'block';
+                localStorage.setItem(nestedSectionId, 'open');
+                localStorage.setItem(nestedSectionId + '_bold', 'true');
             }
         } else {
             section.style.display = 'none';
+            localStorage.setItem(section.id, 'closed');
+            localStorage.setItem(section.id + '_bold', 'false');
         }
     });
 
@@ -37,7 +45,6 @@ function toggleNestedContent(nestedSectionId, link) {
     } else {
         link.classList.remove('bold');
     }
-
 }
 
 
@@ -161,8 +168,48 @@ function toggleMenu() {
     }
 }
 
+function applyStoredSidebarState() {
+    var nestedSections = document.querySelectorAll('.nested_content');
+    var extraSections = document.querySelectorAll('.extra_content'); // Assuming you have a class for these sections
+
+    nestedSections.forEach(function(section) {
+        var state = localStorage.getItem(section.id);
+        var boldState = localStorage.getItem(section.id + '_bold');
+        if (state === 'open') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+        if (boldState === 'true') {
+            var link = document.querySelector(`[data-section-id="${section.id}"]`);
+            if (link) {
+                link.classList.add('bold');
+            }
+        }
+    });
+
+    extraSections.forEach(function(section) {
+        var state = localStorage.getItem(section.id);
+        var boldState = localStorage.getItem(section.id + '_bold');
+        if (state === 'open') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+        if (boldState === 'true') {
+            var link = document.querySelector(`[data-section-id="${section.id}"]`);
+            if (link) {
+                link.classList.add('bold');
+            }
+        }
+    });
+}
+
+
+// Call this function after the sidebar has been loaded
 fetch('sidebar.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('sidebar').innerHTML = data;
-});
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('sidebar').innerHTML = data;
+        applyStoredSidebarState(); // Apply stored state
+    });
