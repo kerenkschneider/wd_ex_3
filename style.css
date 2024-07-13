@@ -71,6 +71,7 @@
 .menu_link_list {
     list-style-type: none; 
     padding: 0;
+    margin: 0;
 }
 
 .menu_link {
@@ -182,7 +183,7 @@
     justify-content: center;
     align-items: center;
 
-margin-bottom: 200px;
+    margin-bottom: 200px;
 
     z-index: 2;
 
@@ -460,6 +461,7 @@ margin-bottom: 200px;
 }   
 }
 
+
 @media (max-width: 850px) {
 /* side notes */
 .main_section_text_container .side_note_container{
@@ -479,12 +481,24 @@ margin-bottom: 200px;
     margin-right: 0%;  
 }
 
-/* menu */
-.click_logo_container{
+.logo_container {
+    display: none;
+}
+.click_logo_container {
     display: inline;
 }
-.logo_container{ 
-    display: none;
+.links_container {
+    display: none; /* Hide menu by default on small screens */
+
+}
+.links_container.menu_visible {
+    display: block; /* Show menu when the class is added */
+    background-color: #EBEBEB; 
+    z-index: 100;
+    width: 180px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
 }
 
 }
