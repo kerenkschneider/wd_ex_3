@@ -177,7 +177,7 @@ justify-content: center;
 align-items: center;
 
 margin-top: 20vw;
-margin-bottom: 1vw;
+margin-bottom: 200px;
 
 z-index: 2;
 
@@ -428,7 +428,6 @@ opacity: 0.8;
     width: 100%; 
     align-items: flex-end; 
     margin-right: -10%;
-    margin-bottom: 100px;
 }
 
 .main_auther {
@@ -502,7 +501,6 @@ opacity: 0.8;
 .main{
     width: 110%;
     margin-top: 90vw;
-    
 }
 
 }
