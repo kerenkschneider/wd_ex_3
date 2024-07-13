@@ -249,6 +249,18 @@
     padding: 25px;  
 }
 
+.main_text_bidayon{
+    background-color: #7BCAC8;
+    margin-right: 20px;    
+    padding: 25px;  
+}
+
+.main_text_translation{
+    background-color: #DF906F;
+    margin-right: 20px;    
+    padding: 25px;  
+}
+
 .side_note_container{
     padding: 25px;  
     flex-basis: 20%;
@@ -412,7 +424,6 @@
 /* Media query for small screens */
 @media (max-width: 1100px) {
     .main {
-        /* margin-top: 100px; */
         width: 100%; 
         align-items: flex-end; 
         margin-right: -10%;
