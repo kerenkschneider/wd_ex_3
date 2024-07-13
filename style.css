@@ -51,6 +51,16 @@
     src: url("assets/fonts/FrankG/FrankG-Regular.woff2") format("woff2"); 
 }
 
+@font-face {
+    font-family: 'Frankg-bold';
+    src: url("assets/fonts/FrankG/FrankG-Bold.woff2") format("woff2"); 
+}
+
+@font-face {
+    font-family: 'Frankg-black';
+    src: url("assets/fonts/FrankG/FrankG-Black.woff2") format("woff2"); 
+}
+
 /************/
 /* side bar */
 /************/
@@ -141,6 +151,24 @@
     left: 0;
 }
 
+.main_auther_column {
+    width: 250px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    text-align: right
+}
+
+.column {
+    flex: 1 1 45%;
+    box-sizing: border-box;
+}
+
+.column_right {
+    flex: 1 1 25%;  
+}
+
 .auther_headline{
     /* text style */
 
@@ -182,7 +210,7 @@
     justify-content: center;
     align-items: center;
 
-margin-bottom: 200px;
+    margin-bottom: 500px;
 
     z-index: 2;
 
@@ -261,8 +289,14 @@ margin-bottom: 200px;
     padding: 25px;  
 }
 
-.main_text_translation{
+.main_text_about{
     background-color: #DF906F;
+    margin-right: 20px;    
+    padding: 25px;  
+}
+
+.main_text_kol{
+    background-color: #B690CF;
     margin-right: 20px;    
     padding: 25px;  
 }
@@ -391,6 +425,15 @@ margin-bottom: 200px;
     margin-bottom: 20px;
 }
 
+.underline{
+    text-decoration:underline;
+}
+
+.name{
+    font-family:'Frankg-bold';
+    font-size: 20px;
+}
+
 .transparent-text {
     opacity: 0%;
     margin-top: -20px;
@@ -453,6 +496,10 @@ margin-bottom: 200px;
 
 .main_auther {
     width: 450px; 
+}
+
+.main_auther_column {
+    width: 300px; 
 }
 
 .headline_container h1{
