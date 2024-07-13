@@ -614,9 +614,6 @@
     .main{
         width: 110%;
     }
-}
-
-@media (max-width: 400px) {
     .click_logo_container{
         width: 70px;
     }
