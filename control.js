@@ -137,8 +137,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// ***************** //
+/* function sidebar */
+// **************** //
+
 /* JavaScript function to toggle menu visibility */
 function toggleMenu() {
+    event.preventDefault(); // Prevent the default action of the link
     var menu = document.querySelector('.links_container');
     menu.classList.toggle('menu_visible');
+
+    var menu = document.querySelector('.click_logo_container');
+    menu.classList.toggle('menu_visible');
+
+    var menu = document.querySelector('.open');
+    menu.classList.toggle('menu_visible');
+
+    var menuIcon = document.querySelector('.open');
+    if (menuIcon.src.includes('open.png')) {
+        menuIcon.src = 'assets/icons/close.png';
+    } else {
+        menuIcon.src = 'assets/icons/open.png';
+    }
 }
+
+fetch('sidebar.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('sidebar').innerHTML = data;
+});

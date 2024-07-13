@@ -75,7 +75,15 @@
 }
 
 .logo {
-    width: 50%; 
+    margin-top: 5px;
+    width: 100px; 
+    background-color: #EBEBEB; 
+}
+
+.open {
+    background-color: #EBEBEB; 
+    width: 40px; 
+    margin-right: 55px;
 }
 
 .menu_link_list {
@@ -531,13 +539,25 @@
 .logo_container {
     display: none;
 }
+
 .click_logo_container {
-    display: inline;
+    width: 100px;
+    display: inline-block; 
+    background-color: #EBEBEB; 
 }
+
 .links_container {
     display: none; /* Hide menu by default on small screens */
 
 }
+.click_logo_container.menu_visible {
+    width: 180px; 
+}
+
+.open.menu_visible {
+    margin-right: 130px;
+}
+
 .links_container.menu_visible {
     display: block; /* Show menu when the class is added */
     background-color: #EBEBEB; 
@@ -545,7 +565,6 @@
     width: 180px;
     padding-top: 5px;
     padding-bottom: 5px;
-
 }
 
 }
@@ -569,6 +588,20 @@
 .main_section_headline_container{
     margin-right: 0%;  
 }
+
+.click_logo_container{
+    width: 80px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.open{
+    width: 35px;
+    margin-right: 35px;
+}
+
 }
 @media (max-width: 440px) {
 .main{
