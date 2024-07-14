@@ -221,6 +221,23 @@
     margin-top: 0;
 }
 
+
+/*************/
+/* main page */
+/*************/
+
+.main_list_3{
+    position: fixed;
+    bottom: 0;
+    left: 2vw;
+    /* text */
+    font-size: 7.5vw;    
+}
+
+.odd_3{
+    text-align: left;
+}
+
 /********************/
 /* list page kind_2 */
 /********************/
@@ -1067,15 +1084,33 @@ a.border_conteiner_11{
         margin-right: 10px;
         margin-top: 15vw;
     }
+
+    
 }
 
 @media (max-width: 700px) {
     .main_list_1{
         flex-direction: column;
     }
+
+    .border_conteiner_00 p{
+        font-size: 28px;
+    }
+
+    .border_conteiner_0 p{
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 505px) {
+
+    .border_conteiner_00 p{
+        font-size: 22px;
+    }
+
+    .border_conteiner_0 p{
+        font-size: 22px;
+    }
     .main_auther {    
         width: 220px; 
     }
