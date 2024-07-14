@@ -35,6 +35,11 @@
 }
 
 @font-face {
+    font-family: 'SimplerPro-semi-bold-italic';
+    src: url("assets/fonts/SimplerPro/SimplerPro-SemiboldItalic.woff2") format("woff2");   
+}
+
+@font-face {
     font-family: 'SimplerPro-light-italic';
     src: url("assets/fonts/SimplerPro/SimplerPro-LightItalic.woff2") format("woff2");  
 }
@@ -353,6 +358,8 @@ a.no-underline_9:hover {
     align-self: flex-end;
     margin-top: -10vw;
     margin-bottom: -5vw;
+    line-height: 90%;
+
 }
 
 .even{
@@ -361,6 +368,7 @@ a.no-underline_9:hover {
     align-self: flex-start;
     margin-top: -10vw;
     margin-bottom: -5vw;
+    line-height: 90%;
 
 }
 
@@ -746,6 +754,11 @@ a.border_conteiner_11{
     margin-right: 18%;  
 }
 
+.main_section_headline_container_only_star{
+    margin-bottom: -20px;
+    margin-right: 23.5%;  
+}
+
 .main_section_headline_container h3{    
     /* text style */
     font-family: 'SimplerPro-semi-bold';
@@ -838,7 +851,7 @@ a.border_conteiner_11{
 
 .quote{    
     /* text style */
-    font-size: 18px;
+    font-size: 30px;
     line-height: 1.5;
     font-family: 'SimplerPro-regular-italic';
 
@@ -895,7 +908,7 @@ a.border_conteiner_11{
 
 .quote_arabic{    
     /* text style */
-    font-size: 18px;
+    font-size: 30px;
     line-height: 1.5;
     font-family: 'SimplerPro-regular';
 
@@ -906,7 +919,9 @@ a.border_conteiner_11{
 
 .text_name{    
     /* text style */
-    font-family: 'SimplerPro-regular-italic';
+    /* font-family: 'SimplerPro-semi-bold-italic'; */
+    font-family: 'SimplerPro-light-italic';
+
 }
 
 
@@ -1044,6 +1059,10 @@ a.border_conteiner_11{
         margin-right: 0%;  
     }
 
+    .main_section_headline_container_only_star{
+        margin-right: 0%;     
+    }
+
     .logo_container {
         display: none;
     }
@@ -1120,7 +1139,9 @@ a.border_conteiner_11{
     }
 
     .quote{
-        font-size: 16px;
+        font-size: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
     }
     .main{
         margin-right: 0%; 
