@@ -2,58 +2,58 @@
             
     <div class="click_logo_container">
         <div>
-            <a href="index.html">
+            <a href="index.html" class="non_nested_link">
                 <img src="assets/logo/logo_no_text_same_size.png" alt="logo" class="logo">
             </a>
         </div>
         <div>
-            <a href="#" onclick="toggleMenu();">
-                <img src="assets/icons/open.png" alt="menu" class="open">
-            </a>
+            <a href="#!" class="open_main_sidebar" onclick="toggleMenu();">>></a>
         </div>
     </div>
 
-    <div class="logo_container">
-        <a href="index.html">        
-            <img src="assets/logo/logo.png" alt="logo" class="logo">
-        </a>
-    </div>
-    <div class="links_container">
-        <ul class="menu_link_list">
-            <li><a href="about.html" class="menu_link">אודות |</a></li>
-            <li><a href="#!" class="menu_link" onclick="toggleExtraContent('extraContent', this)" data-section-id="section1">כניסה לגליון |</a></li>
-            <div id="extraContent" class="extra_content">
-                <li><a href="open_thing.html" class="menu_link">פתח דבר |</a></li>
-                <li><a href="#!" class="menu_link" onclick="toggleNestedContent('articles', this)" data-section-id="nestedSection1">מאמרים |</a></li>
-                <div id="articles" class="nested_content">
-                    <li><a href="maamar_1.html" class="menu_link">שהאחרון יכבה את האור | עידן פוקס וטל בן צבי |</a></li>
+        <div class="logo_container">
+            <a href="index.html" class="non_nested_link">        
+                <img src="assets/logo/logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <div class="links_container">
+            <ul class="menu_link_list">
+                <li><a href="about.html" class="menu_link non_nested_link">אודות |</a></li>
+
+                <li><a href="gilion.html" class="menu_link"> גיליון #10 |</a></li>
+                <li><a href="#!" class="menu_link plus" onclick="toggleExtraContent('extraContent', this)" data-section-id="extraSection"> >> </a></li>
+                <div id="extraContent" class="extra_content">
+                    <li><a href="open_thing.html" class="menu_link">פתח דבר |</a></li>
+                    <li><a href="#!" class="menu_link" onclick="toggleNestedContent('articles', this)" data-section-id="nestedSection">מאמרים |</a></li>
+                    <div id="articles" class="nested_content">
+                        <li><a href="maamar_1.html" class="menu_link">שהאחרון יכבה את האור | עידן פוקס וטל בן צבי |</a></li>
+                    </div>
+                    <li><a href="#!" class="menu_link" onclick="toggleNestedContent('essays', this)" data-section-id="nestedSection">מסות |</a></li>
+                    <div id="essays" class="nested_content">
+                        <li><a href="" class="menu_link">הדרך | גלילי שחר |</a></li>
+                        <li><a href="masa_1.html" class="menu_link">מבנה טרומי | ידידה גזבר |</a></li>
+                    </div>
+                    <li><a href="#!" class="menu_link" onclick="toggleNestedContent('notes', this)" data-section-id="nestedSection">רשימות |</a></li>
+                    <div id="notes" class="nested_content">
+                        <li><a href="lists_1.html" class="menu_link">משטרת ישר-אל הלב מבחר דוחות 2020-2023 | השוטרת אז-אולי |</a></li>
+                        <li><a href="" class="menu_link"> נצרת, עיר הבשורה האקטיביסטית | ח׳ולוד אבו אחמד |</a></li>
+                    </div>
+                    <li><a href="#!" class="menu_link" onclick="toggleNestedContent('fiction', this)" data-section-id="nestedSection">בדיונות |</a></li>
+                    <div id="fiction" class="nested_content">
+                        <li><a href="bidayon_1.html" class="menu_link">בידיוניום | שמעון אדף |</a></li>
+                        <li><a href="" class="menu_link">שיחה עם ציפור | הילי כהן-מגורי |</a></li>
+                    </div>
+                    <li><a href="#!" class="menu_link" onclick="toggleNestedContent('translations', this)" data-section-id="nestedSection">תרגומים |</a></li>
+                    <div id="translations" class="nested_content">
+                        <li><a href="" class="menu_link">ידעים ממוקדים | דונה האראווי |</a></li>
+                    </div>
                 </div>
-                <li><a href="#!" class="menu_link" onclick="toggleNestedContent('essays', this)" data-section-id="nestedSection1">מסות |</a></li>
-                <div id="essays" class="nested_content">
-                    <li><a href="" class="menu_link">הדרך | גלילי שחר |</a></li>
-                    <li><a href="masa_1.html" class="menu_link">מבנה טרומי | ידידה גזבר |</a></li>
-                </div>
-                <li><a href="#!" class="menu_link" onclick="toggleNestedContent('notes', this)" data-section-id="nestedSection1">רשימות |</a></li>
-                <div id="notes" class="nested_content">
-                    <li><a href="lists_1.html" class="menu_link">משטרת ישר-אל הלב מבחר דוחות 2020-2023 | השוטרת אז-אולי |</a></li>
-                    <li><a href="" class="menu_link"> נצרת, עיר הבשורה האקטיביסטית | ח׳ולוד אבו אחמד |</a></li>
-                </div>
-                <li><a href="#!" class="menu_link" onclick="toggleNestedContent('fiction', this)" data-section-id="nestedSection1">בדיונות |</a></li>
-                <div id="fiction" class="nested_content">
-                    <li><a href="bidayon_1.html" class="menu_link">בידיוניום | שמעון אדף |</a></li>
-                    <li><a href="" class="menu_link">שיחה עם ציפור | הילי כהן-מגורי |</a></li>
-                </div>
-                <li><a href="#!" class="menu_link" onclick="toggleNestedContent('translations', this)" data-section-id="nestedSection1">תרגומים |</a></li>
-                <div id="translations" class="nested_content">
-                    <li><a href="" class="menu_link">ידעים ממוקדים | דונה האראווי |</a></li>
-                </div>
-            </div>
-            <li><a href="" class="menu_link">גליונות קודמים |</a></li>
-            <li><a href="" class="menu_link">התקנת מאמר |</a></li>
-            <li><a href="" class="menu_link">היסטוריה ותיאוריה: הפרוטוקולים |</a></li>
-            <li><a href="" class="menu_link">הספר השנתי |</a></li>
-            <li><a href="kol.html" class="menu_link">קול קורא |</a></li>
-            <li><a href="" class="menu_link">הילקוט |</a></li>
-        </ul>
-    </div>
+                <li><a href="" class="menu_link non_nested_link">גליונות קודמים |</a></li>
+                <li><a href="" class="menu_link non_nested_link">התקנת מאמר |</a></li>
+                <li><a href="" class="menu_link non_nested_link">היסטוריה ותיאוריה: הפרוטוקולים |</a></li>
+                <li><a href="" class="menu_link non_nested_link">הספר השנתי |</a></li>
+                <li><a href="kol.html" class="menu_link non_nested_link">קול קורא |</a></li>
+                <li><a href="" class="menu_link non_nested_link">הילקוט |</a></li>
+            </ul>
+        </div>
 </div>

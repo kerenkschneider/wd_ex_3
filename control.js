@@ -1,15 +1,18 @@
+
 // ************************** //
 /* function for dropdown menu */
 // ************************** //
 
-function toggleExtraContent(sectionId) {
+function toggleExtraContent(sectionId, linkElement) {
     var section = document.getElementById(sectionId);
     if (section.style.display === 'block') {
         section.style.display = 'none';
         localStorage.setItem(sectionId, 'closed');
+        linkElement.textContent = '>>'; // Change text to >>
     } else {
         section.style.display = 'block';
         localStorage.setItem(sectionId, 'open');
+        linkElement.textContent = '<<'; // Change text to <<
     }
 }
 
@@ -24,11 +27,9 @@ function toggleNestedContent(nestedSectionId, link) {
                 section.style.display = 'none';
                 isCurrentlyOpen = true;
                 localStorage.setItem(nestedSectionId, 'closed');
-                localStorage.setItem(nestedSectionId + '_bold', 'false');
             } else {
                 section.style.display = 'block';
                 localStorage.setItem(nestedSectionId, 'open');
-                localStorage.setItem(nestedSectionId + '_bold', 'true');
             }
         } else {
             section.style.display = 'none';
@@ -36,22 +37,51 @@ function toggleNestedContent(nestedSectionId, link) {
             localStorage.setItem(section.id + '_bold', 'false');
         }
     });
+}
 
-    if (!isCurrentlyOpen) {
-        links.forEach(function(linkItem) {
-            linkItem.classList.remove('bold');
-        });
-        link.classList.add('bold');
-    } else {
-        link.classList.remove('bold');
-    }
+
+function applyStoredSidebarState() {
+    var nestedSections = document.querySelectorAll('.nested_content');
+    var extraSections = document.querySelectorAll('.extra_content'); // Assuming you have a class for these sections
+
+    nestedSections.forEach(function(section) {
+        var state = localStorage.getItem(section.id);
+        var boldState = localStorage.getItem(section.id + '_bold');
+        if (state === 'open') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+        if (boldState === 'true') {
+            var link = document.querySelector(`[data-section-id="${section.id}"]`);
+            if (link) {
+                link.classList.add('bold');
+            }
+        }
+    });
+
+    extraSections.forEach(function(section) {
+        var state = localStorage.getItem(section.id);
+        var boldState = localStorage.getItem(section.id + '_bold');
+        if (state === 'open') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+        if (boldState === 'true') {
+            var link = document.querySelector(`[data-section-id="${section.id}"]`);
+            if (link) {
+                link.classList.add('bold');
+            }
+        }
+    });
 }
 
 
 
 // *************************** //
 /* function headline location */
-// ******************** //
+// ************************** //
 
 
 
@@ -59,8 +89,18 @@ function adjustSectionPosition() {
     var headline = document.querySelector('.article_headline');
     var auther = document.querySelector('.main_auther');
     var section = document.querySelector('.main');
+    if (section == null){
+        var section = document.querySelector('.main_list_1');
+    }
+
     var headlineHeight = headline.offsetHeight;
-    var autherHeight = auther.offsetHeight;
+
+    if (auther != null){
+        var autherHeight = auther.offsetHeight;
+    }
+    else{
+        var autherHeight = 0;
+    }
     
     if (window.innerWidth > 1150) {
         section.style.top = `${headlineHeight}px`;
@@ -157,52 +197,12 @@ function toggleMenu() {
     var menu = document.querySelector('.click_logo_container');
     menu.classList.toggle('menu_visible');
 
-    var menu = document.querySelector('.open');
-    menu.classList.toggle('menu_visible');
-
-    var menuIcon = document.querySelector('.open');
-    if (menuIcon.src.includes('open.png')) {
-        menuIcon.src = 'assets/icons/close.png';
+    var menuLink = document.querySelector('.open_main_sidebar');
+    if (menu.classList.contains('menu_visible')) {
+        menuLink.textContent = '<<'; // Change text to <<
     } else {
-        menuIcon.src = 'assets/icons/open.png';
+        menuLink.textContent = '>>'; // Change text back to >>
     }
-}
-
-function applyStoredSidebarState() {
-    var nestedSections = document.querySelectorAll('.nested_content');
-    var extraSections = document.querySelectorAll('.extra_content'); // Assuming you have a class for these sections
-
-    nestedSections.forEach(function(section) {
-        var state = localStorage.getItem(section.id);
-        var boldState = localStorage.getItem(section.id + '_bold');
-        if (state === 'open') {
-            section.style.display = 'block';
-        } else {
-            section.style.display = 'none';
-        }
-        if (boldState === 'true') {
-            var link = document.querySelector(`[data-section-id="${section.id}"]`);
-            if (link) {
-                link.classList.add('bold');
-            }
-        }
-    });
-
-    extraSections.forEach(function(section) {
-        var state = localStorage.getItem(section.id);
-        var boldState = localStorage.getItem(section.id + '_bold');
-        if (state === 'open') {
-            section.style.display = 'block';
-        } else {
-            section.style.display = 'none';
-        }
-        if (boldState === 'true') {
-            var link = document.querySelector(`[data-section-id="${section.id}"]`);
-            if (link) {
-                link.classList.add('bold');
-            }
-        }
-    });
 }
 
 
