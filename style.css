@@ -324,7 +324,7 @@ a.border_conteiner_4 {
 /**** #5 ****/
 
 .border_conteiner_5{
-    border-right: 8px solid #cac4e1; 
+    border-right: 8px solid #E53C35; 
     padding-right: 20px; 
     flex: 1 0 30%; 
     box-sizing: border-box;
@@ -332,7 +332,7 @@ a.border_conteiner_4 {
     min-width: 200px;
 }
 .border_conteiner_5:hover{
-    background-color: #cac4e1;
+    background-color: #E53C35;
 }
 a.border_conteiner_5:hover {
     color: inherit; 
@@ -345,7 +345,7 @@ a.border_conteiner_5 {
 /**** #6 ****/
 
 .border_conteiner_6{
-    border-right: 8px solid #E53C35; 
+    border-right: 8px solid #cac4e1; 
     padding-right: 20px; 
     flex: 1 0 30%; 
     box-sizing: border-box;
@@ -353,7 +353,7 @@ a.border_conteiner_5 {
     min-width: 200px;
 }
 .border_conteiner_6:hover{
-    background-color: #E53C35;
+    background-color: #cac4e1;
 }
 a.border_conteiner_6:hover {
     color: inherit; 
@@ -425,6 +425,50 @@ a.border_conteiner_9:hover {
     color: inherit; 
 }
 a.border_conteiner_9 {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/**** #10 ****/
+
+.border_conteiner_10{
+    border-right: 8px solid #ef7f31; 
+    padding-right: 20px; 
+    flex: 1 0 30%; 
+    box-sizing: border-box;
+    margin: 20px; 
+    min-width: 200px;
+
+}
+.border_conteiner_10:hover{
+    background-color: #ef7f31;
+}
+a.border_conteiner_10:hover {
+    color: inherit; 
+}
+a.border_conteiner_10 {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/**** #11 ****/
+
+.border_conteiner_11{
+    border-right: 8px solid #2c6967; 
+    padding-right: 20px; 
+    flex: 1 0 30%; 
+    box-sizing: border-box;
+    margin: 20px; 
+    min-width: 200px;
+
+}
+.border_conteiner_11:hover{
+    background-color: #2c6967;
+}
+a.border_conteiner_11:hover {
+    color: inherit; 
+}
+a.border_conteiner_11{
     text-decoration: none; 
     color: inherit; 
 }
