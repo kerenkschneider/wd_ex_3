@@ -1104,6 +1104,14 @@ a.border_conteiner_11{
         margin-top: 15vw;
     }
 
+    .odd{
+        margin-top: 0vw;
+    }
+
+    .even{
+        margin-top: 0vw;
+    }
+
     
 }
 
