@@ -277,7 +277,7 @@ a.no-underline_1 {
 a.no-underline_1:hover {
     text-decoration: underline; 
     color: inherit; 
-    text-decoration-color: #E53C35; 
+    text-decoration-color: #e35b57; 
 }
 a.no-underline_2 {
     color: black;
@@ -493,7 +493,7 @@ a.border_conteiner_2 {
 /**** #3 ****/
 
 .border_conteiner_3{
-    border-right: 8px solid #2c6967; 
+    border-right: 8px solid #429b98; 
     padding-right: 20px; 
     flex: 1 0 30%; 
     box-sizing: border-box;
@@ -501,7 +501,7 @@ a.border_conteiner_2 {
     min-width: 200px;
 }
 .border_conteiner_3:hover{
-    background-color: #2c6967;
+    background-color: #429b98;
 }
 a.border_conteiner_3:hover {
     color: inherit; 
@@ -535,7 +535,7 @@ a.border_conteiner_4 {
 /**** #5 ****/
 
 .border_conteiner_5{
-    border-right: 8px solid #E53C35; 
+    border-right: 8px solid #e35b57; 
     padding-right: 20px; 
     flex: 1 0 30%; 
     box-sizing: border-box;
@@ -543,7 +543,7 @@ a.border_conteiner_4 {
     min-width: 200px;
 }
 .border_conteiner_5:hover{
-    background-color: #E53C35;
+    background-color: #e35b57;
 }
 a.border_conteiner_5:hover {
     color: inherit; 
@@ -801,7 +801,7 @@ a.border_conteiner_11{
 }
 
 .main_text_lists{
-    background-color: #E53C35;
+    background-color: #e35b57;
     margin-right: 20px;    
     padding: 25px;  
 }
@@ -972,7 +972,7 @@ a.border_conteiner_11{
 }
 
 .transparent_list-text {
-    color: #E53C35;
+    color: #e35b57;
     line-height: 0.00001px;
     margin-top: -20px;
     opacity: 0%;
