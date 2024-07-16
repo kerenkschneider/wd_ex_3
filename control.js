@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     sidenote.style.top = `${clickY}px`;
                     sidenote.style.left = `${clickX}px`;
 
-                    sidenote.style.display = 'block';
+                    sidenote.style.display = 'inline';
                 }
             });
         });
